@@ -1,7 +1,12 @@
 package challenge01;
 
+import static org.junit.Assert.assertTrue;
+import static org.junit.jupiter.api.Assertions.assertEquals;
+
 import java.util.LinkedHashSet;
 import java.util.Set;
+
+import org.junit.jupiter.api.Test;
 
 
 /**
@@ -38,4 +43,39 @@ public class Challenge01 {
 		}
 
 	}
+	
+	  @Test
+	    public void nullTest() {
+	        Challenge01 tester = new Challenge01();
+	        Set<Character> s=tester.getDuplicates(null);
+	       assertEquals(0, s.size()); 
+	    }
+	    
+	    @Test
+	    public void emptyTest() {
+	        Challenge01 tester = new Challenge01();
+	        String str=new String("");
+	        Set<Character> s=tester.getDuplicates(str);
+	       assertEquals(0, s.size()); 
+	    }
+	    
+	    @Test
+	    public void aTest() {
+	        Challenge01 tester = new Challenge01();
+	        String str=new String("Java");
+	        Set<Character> s=tester.getDuplicates(str);
+	        assertTrue(s.contains('a')); 
+	    }
+	    
+	    @Test
+	    public void bTest() {
+	        Challenge01 tester = new Challenge01();
+	        String str=new String("Programming");
+	        Set<Character> s=tester.getDuplicates(str);
+	        assertTrue(s.contains('r'));
+	        assertTrue(s.contains('g'));
+	        assertTrue(s.contains('m'));
+	        
+	        
+	    }
 }
