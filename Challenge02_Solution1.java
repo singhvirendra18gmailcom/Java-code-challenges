@@ -1,7 +1,6 @@
 package challenge02;
 
 import static org.junit.Assert.assertTrue;
-
 import java.util.LinkedHashMap;
 import java.util.Map;
 
