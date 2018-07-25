@@ -18,10 +18,11 @@ Challenge 11) How to find all permutations of String?
 Challenge 12) How to reverse words in a sentence without using library method?
 Challenge 13) How to check if String is Palindrome?
 Challenge 14) How to remove duplicate characters from String? 
-Challenge 15) How to check if a String is valid shuffle of two String? 
-Challenge 16) Write a program to check if a String contains another String e.g. indexOf()?
+Challenge 16) Validate xml tags structure 
+----to be done-----
 Challenge 17) How  to return highest occurred character in a String?
 Challenge 18) Write a program to remove a given characters from String? 
 Challenge 19) Write a program to find longest palindrome in a string?
 Challenge 20) How to sort String on their length in Java? 
+Challenge 21)Write a program to check if a String contains another String e.g. indexOf()?
 
