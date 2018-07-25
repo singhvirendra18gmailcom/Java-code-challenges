@@ -1,7 +1,6 @@
 package challenge15;
 
 import static org.junit.Assert.assertTrue;
-
 import java.util.LinkedHashSet;
 import java.util.Set;
 import org.junit.jupiter.api.Test;
@@ -10,8 +9,8 @@ import org.junit.jupiter.api.Test;
  * The Class Challenge14. remove duplicate characters from String? This is one
  * of the interesting String question, which also has lots of variants. You need
  * to remove duplicate characters from a given string keeping only the first
- * occurrences. For example, if the input is ‘bananas’ the output will be
- * ‘bans’. Pay attention to what output could be, because if you look closely
+ * occurrences. For example, if the input is â€˜bananasâ€™ the output will be
+ * â€˜bansâ€™. Pay attention to what output could be, because if you look closely
  * original order of characters are retained the in output
  * 
  */
