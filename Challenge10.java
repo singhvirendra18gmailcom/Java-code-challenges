@@ -1,5 +1,4 @@
 package challenge10;
-
 import static org.junit.Assert.assertTrue;
 
 import org.junit.Test;
