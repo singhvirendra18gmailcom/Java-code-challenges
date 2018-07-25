@@ -4,7 +4,7 @@ String challenges
 
 this repository contains coding problems related to String abd their solutions.
 
-Challenge 1) Print duplicate characters from String?
+Challenge 1) Print duplicate characters from String? \n
 Challenge 2) check if two Strings are anagrams of each other? 
 Challenge 3) print first non repeated character from String? 
 Challenge 4) How to reverse String in Java using Iteration and Recursion? 
