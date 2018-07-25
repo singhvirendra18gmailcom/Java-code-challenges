@@ -1,7 +1,6 @@
 package challenge09;
 
 import java.util.regex.Pattern;
-
 import org.junit.Test;
 
 /**
