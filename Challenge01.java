@@ -2,7 +2,6 @@ package challenge01;
 
 import static org.junit.Assert.assertTrue;
 import static org.junit.jupiter.api.Assertions.assertEquals;
-
 import java.util.LinkedHashSet;
 import java.util.Set;
 
