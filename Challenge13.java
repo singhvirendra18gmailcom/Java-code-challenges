@@ -1,9 +1,7 @@
 package challenge13;
 
 import static org.junit.Assert.assertTrue;
-
 import java.util.Set;
-
 import org.junit.jupiter.api.Test;
 
 /**
