@@ -36,4 +36,5 @@ public class Challenge12 {
 		System.out.println(returned);
 		assertTrue("hello hi how".equals(returned));
 	}
+	
 }
