@@ -1,5 +1,5 @@
-# String-challenges
-String challenges 
+# Java-code-challenges
+Java-code-challenges 
 
 
 this repository contains coding problems related to String abd their solutions.
