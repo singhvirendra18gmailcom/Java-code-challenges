@@ -1,114 +1,76 @@
 package collection;
 
-import static org.junit.jupiter.api.Assertions.assertTrue;
-
-import org.junit.jupiter.api.Test;
-
 public class LinkedList<T> {
 
 	private Node<T> head;
+	private Node<T> tail;
 
 	public LinkedList() {
+		head = null;
+		tail = null;
+	}
 
+	public void add(T data) {
+		Node<T> node = new Node<T>(data, null, null);
+		Node<T> current=null;
+		if (head == null && tail == null) {
+			head = node;
+			tail = node;
+			head.setPrevious(null);
+			head.setNext(null);
+			tail.setNext(null);
+			tail.setPrevious(null);
+			
+		} else {
+			tail=node;
+			current=head;
+			while(current.getNext()!=null) {
+				current=current.getNext();
+			}
+			current.setNext(tail);
+			tail.setPrevious(current);
+		}
 	}
 
 	public String toString() {
 		StringBuffer toReturn = new StringBuffer("[");
-		Node<T> tempHead=head;
-		if (tempHead != null) {
-			toReturn.append(tempHead.getElement());
-			while (tempHead.getNext() != null) {
-				tempHead = tempHead.getNext();
-				toReturn.append(", ").append(tempHead.getElement());
+		Node<T> curr = head;
+		while (curr!=null) {
+			toReturn.append(curr.getData()).append(" , ");
+			curr=curr.getNext();
 
-			}
 		}
 		toReturn.append("]");
 		return toReturn.toString();
 	}
 
-	public Node<T> getHead() {
-		return head;
-	}
-
-	public void setHead(Node<T> head) {
-		this.head = head;
-	}
-
-	public T add(T data) {
-		if(data==null) {
-			return null;
-		}
-		Node<T> n = new Node<T>(data, null);
-		Node<T> tempHead = head;
-		if (tempHead == null) {
-			tempHead = n;
-			head = tempHead;
-		} else {
-			while (tempHead.getNext() != null) {
-				tempHead = tempHead.getNext();
-			}
-
-			tempHead.setNext(n);
-		}
-		return data;
-	}
-
-	public T remove(T data) {
-
-		Node<T> tempHead = head;
-		Node<T> previous = head;
-
-		if (tempHead == null) {
-			return null;
-		} else {
-
-			while (tempHead != null) {
-				if (tempHead.getElement().equals(data)) {
-					previous.setNext(tempHead.getNext());
-					break;
-				}
-				previous = tempHead;
-				tempHead = tempHead.next;
-			}
-		}
-		return data;
-	}
-
-	@Test
-	public void test() {
-		LinkedList<String> list = new LinkedList<>();
-		System.out.println(list);
-
-		System.out.println("-----------------------------");
-
-		assertTrue("Hello".equalsIgnoreCase(list.add("Hello")));
-		assertTrue("Saty".equalsIgnoreCase(list.add("Saty")));
-		assertTrue("vir".equalsIgnoreCase(list.add("vir")));
-		assertTrue(null==list.add(null));
-		
-		assertTrue("Man".equalsIgnoreCase(list.add("Man")));
-		
-	
-
-		System.out.println(list);
-
-		System.out.println("-----------------------------");
-		assertTrue("vir".equalsIgnoreCase(list.remove(("vir"))));
-		System.out.println(list);
-
-	}
-
 	private class Node<T> {
-		private T element;
+
+		private T data;
+		private Node<T> previous;
 		private Node<T> next;
 
-		public T getElement() {
-			return element;
+		public Node(T data, Node<T> previous, Node<T> next) {
+			super();
+			this.data = data;
+			this.previous = previous;
+			this.next = next;
 		}
 
-		public void setElement(T element) {
-			this.element = element;
+		public T getData() {
+			return data;
+		}
+
+		public void setData(T data) {
+			this.data = data;
+		}
+
+		public Node<T> getPrevious() {
+			return previous;
+		}
+
+		public void setPrevious(Node<T> previous) {
+			this.previous = previous;
 		}
 
 		public Node<T> getNext() {
@@ -119,11 +81,20 @@ public class LinkedList<T> {
 			this.next = next;
 		}
 
-		public Node(T element, Node<T> next) {
-			this.element = element;
-			this.next = next;
-		}
-
+		
 	}
-
+	
+	public static void main(String[] args) {
+		LinkedList<String> list=new LinkedList<>();
+		System.out.println(list);
+		list.add("Hello");
+		list.add("ajay");
+		list.add("jay");
+		list.add("vijay");
+		list.add("Sanjay");
+		System.out.println("========================");
+		System.out.println(list);
+		
+		
+	}
 }
