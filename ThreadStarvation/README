@@ -1,0 +1,15 @@
+Starvation describes a situation where a greedy thread holds a resource for a long time so other threads are blocked forever. 
+The blocked threads are waiting to acquire the resource but they never get a chance. Thus they starve to death.
+Starvation can occur due to the following reasons:
+- Threads are blocked infinitely because a thread takes long time to execute some synchronized code (e.g. heavy I/O operations or 
+ infinite loop).
+
+- A thread doesn’t get CPU’s time for execution because it has low priority as compared to other threads which have higher priority.
+
+- Threads are waiting on a resource forever but they remain waiting forever because other threads are constantly notified instead 
+  of the hungry ones.
+
+When a starvation situation occurs, the program is still running but doesn’t run to completion because some threads are 
+not executed.
+
+In general, you should design your program to avoid starvation situation.
