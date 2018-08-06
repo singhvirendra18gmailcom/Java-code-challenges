@@ -1,8 +1,0 @@
-/**
- * 
- */
-/**
- * @author singh
- *
- */
-package MyOwnCollectionImplementation;
